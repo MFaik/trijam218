@@ -1,0 +1,65 @@
+[gd_scene load_steps=12 format=3 uid="uid://t1kqm7opdxhl"]
+
+[ext_resource type="PackedScene" uid="uid://iu6ng6o8tf8o" path="res://ui.tscn" id="1_5ry3x"]
+[ext_resource type="PackedScene" uid="uid://btcea7emiae6r" path="res://Mail.tscn" id="2_28s51"]
+[ext_resource type="Script" path="res://CameraShake.gd" id="2_d6kth"]
+[ext_resource type="Texture2D" uid="uid://bvp80k4yguv26" path="res://Sprites/Eat0.png" id="3_1j730"]
+[ext_resource type="Script" path="res://Eat.gd" id="3_l0bt6"]
+[ext_resource type="Texture2D" uid="uid://bxfwmh6vooimb" path="res://Sprites/Eat1.png" id="4_fgghk"]
+[ext_resource type="Texture2D" uid="uid://dide1ylr8n3kd" path="res://Sprites/Eat2.png" id="5_j7x0t"]
+[ext_resource type="Texture2D" uid="uid://bhitredq12dm1" path="res://Sprites/Eat3.png" id="6_js4cr"]
+[ext_resource type="Texture2D" uid="uid://cwcl07civgby4" path="res://Sprites/Eat4.png" id="7_5g8ga"]
+[ext_resource type="Texture2D" uid="uid://cee2qp1aner7v" path="res://Sprites/Eat5.png" id="8_ou2ri"]
+[ext_resource type="Texture2D" uid="uid://dp1hcxqehrklv" path="res://Sprites/Click.png" id="10_wfqpj"]
+
+[node name="Node" type="Node"]
+
+[node name="UI" parent="." instance=ExtResource("1_5ry3x")]
+next_scene = ExtResource("2_28s51")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(480, 270)
+script = ExtResource("2_d6kth")
+
+[node name="Node2D" type="Node2D" parent="."]
+script = ExtResource("3_l0bt6")
+
+[node name="Eat0" type="Sprite2D" parent="Node2D"]
+z_index = -20
+position = Vector2(480, 270)
+texture = ExtResource("3_1j730")
+
+[node name="Eat1" type="Sprite2D" parent="Node2D"]
+visible = false
+z_index = -20
+position = Vector2(480, 270)
+texture = ExtResource("4_fgghk")
+
+[node name="Eat2" type="Sprite2D" parent="Node2D"]
+visible = false
+z_index = -20
+position = Vector2(480, 270)
+texture = ExtResource("5_j7x0t")
+
+[node name="Eat3" type="Sprite2D" parent="Node2D"]
+visible = false
+z_index = -20
+position = Vector2(480, 270)
+texture = ExtResource("6_js4cr")
+
+[node name="Eat4" type="Sprite2D" parent="Node2D"]
+visible = false
+z_index = -20
+position = Vector2(480, 270)
+texture = ExtResource("7_5g8ga")
+
+[node name="Eat5" type="Sprite2D" parent="Node2D"]
+visible = false
+z_index = -20
+position = Vector2(480, 270)
+texture = ExtResource("8_ou2ri")
+
+[node name="Click" type="Sprite2D" parent="."]
+z_index = -20
+position = Vector2(94, 194)
+texture = ExtResource("10_wfqpj")

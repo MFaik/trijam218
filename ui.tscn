@@ -1,0 +1,271 @@
+[gd_scene load_steps=10 format=3 uid="uid://iu6ng6o8tf8o"]
+
+[ext_resource type="Script" path="res://ui.gd" id="1_0qmjl"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_kqard"]
+font_size = 30
+font_color = Color(0.0196078, 0.105882, 0.172549, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s5cbo"]
+bg_color = Color(0.0196078, 0.105882, 0.172549, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5yu2o"]
+bg_color = Color(0.545098, 0.784314, 0.996078, 1)
+
+[sub_resource type="Theme" id="Theme_bbogn"]
+ProgressBar/styles/background = SubResource("StyleBoxFlat_s5cbo")
+ProgressBar/styles/fill = SubResource("StyleBoxFlat_5yu2o")
+
+[sub_resource type="Animation" id="Animation_fsupf"]
+resource_name = "Fight End"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("End:theme_override_colors/font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.0196078, 0.105882, 0.172549, 0), Color(0.0196078, 0.105882, 0.172549, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("End:theme_override_colors/font_outline_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.545098, 0.784314, 0.996078, 0), Color(0.545098, 0.784314, 0.996078, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("End:theme_override_font_sizes/font_size")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [1, 60]
+}
+
+[sub_resource type="Animation" id="Animation_28gtv"]
+resource_name = "Fight Start"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Start:theme_override_font_sizes/font_size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(0.0877997, 1),
+"update": 0,
+"values": [1, 70]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("VBoxContainer/ProgressBar:value")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 100.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Start:theme_override_colors/font_color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 2.5, 3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(0.0196078, 0.105882, 0.172549, 1), Color(0.0196078, 0.105882, 0.172549, 1), Color(0.0196078, 0.105882, 0.172549, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Start:theme_override_colors/font_outline_color")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 2.5, 3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(0.545098, 0.784314, 0.996078, 1), Color(0.545098, 0.784314, 0.996078, 1), Color(0.545098, 0.784314, 0.996078, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_eypt6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Start:theme_override_font_sizes/font_size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [null]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("VBoxContainer/ProgressBar:value")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Start:theme_override_colors/font_color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [null]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("End:theme_override_colors/font_color")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.0196078, 0.105882, 0.172549, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("End:theme_override_font_sizes/font_size")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("End:theme_override_colors/font_outline_color")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.545098, 0.784314, 0.996078, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Start:theme_override_colors/font_outline_color")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.545098, 0.784314, 0.996078, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_cy8la"]
+_data = {
+"Fight End": SubResource("Animation_fsupf"),
+"Fight Start": SubResource("Animation_28gtv"),
+"RESET": SubResource("Animation_eypt6")
+}
+
+[node name="UI" type="MarginContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+script = ExtResource("1_0qmjl")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+z_index = 10
+layout_mode = 2
+text = "Sleep"
+label_settings = SubResource("LabelSettings_kqard")
+horizontal_alignment = 1
+
+[node name="ProgressBar" type="ProgressBar" parent="VBoxContainer"]
+z_index = 10
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+theme = SubResource("Theme_bbogn")
+show_percentage = false
+
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer/ProgressBar"]
+z_index = -10
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -5.0
+offset_top = -5.0
+offset_right = 5.0
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0196078, 0.105882, 0.172549, 1)
+
+[node name="Start" type="Label" parent="."]
+z_index = 10
+layout_mode = 2
+theme_override_colors/font_color = Color(0.0196078, 0.105882, 0.172549, 0)
+theme_override_colors/font_outline_color = Color(0.545098, 0.784314, 0.996078, 1)
+theme_override_constants/outline_size = 10
+text = "WAKE UP!"
+horizontal_alignment = 1
+
+[node name="End" type="Label" parent="."]
+z_index = 10
+layout_mode = 2
+theme_override_colors/font_color = Color(0.0196078, 0.105882, 0.172549, 0)
+theme_override_colors/font_outline_color = Color(0.545098, 0.784314, 0.996078, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 1
+text = "You Did It"
+horizontal_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_cy8la")
+}
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

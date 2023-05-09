@@ -1,0 +1,29 @@
+[gd_scene load_steps=7 format=3 uid="uid://7w5k7jsrha3o"]
+
+[ext_resource type="PackedScene" uid="uid://iu6ng6o8tf8o" path="res://ui.tscn" id="1_g2od3"]
+[ext_resource type="Texture2D" uid="uid://dwosvp772thfq" path="res://Sprites/Sleep.png" id="2_20m83"]
+[ext_resource type="Script" path="res://CameraShake.gd" id="2_eqluu"]
+[ext_resource type="PackedScene" uid="uid://t1kqm7opdxhl" path="res://Eat.tscn" id="2_p5i8v"]
+[ext_resource type="Script" path="res://Sleep.gd" id="5_ewokb"]
+[ext_resource type="Texture2D" uid="uid://bn7m7hcw4g27d" path="res://Sprites/Wakeup.png" id="5_vj1jl"]
+
+[node name="Node" type="Node"]
+
+[node name="UI" parent="." instance=ExtResource("1_g2od3")]
+next_scene = ExtResource("2_p5i8v")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(480, 270)
+script = ExtResource("2_eqluu")
+
+[node name="Sleep" type="Sprite2D" parent="."]
+z_index = -20
+position = Vector2(480, 270)
+texture = ExtResource("2_20m83")
+script = ExtResource("5_ewokb")
+
+[node name="Awake" type="Sprite2D" parent="."]
+visible = false
+z_index = -20
+position = Vector2(480, 270)
+texture = ExtResource("5_vj1jl")

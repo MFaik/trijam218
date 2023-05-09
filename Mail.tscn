@@ -1,0 +1,73 @@
+[gd_scene load_steps=8 format=3 uid="uid://btcea7emiae6r"]
+
+[ext_resource type="PackedScene" uid="uid://iu6ng6o8tf8o" path="res://ui.tscn" id="1_yfegg"]
+[ext_resource type="Script" path="res://CameraShake.gd" id="2_8rtlj"]
+[ext_resource type="PackedScene" uid="uid://do1cdxwmyrbfe" path="res://Sleep.tscn" id="2_q1poc"]
+[ext_resource type="Texture2D" uid="uid://cn1ehseecyo3" path="res://Sprites/Mail.png" id="4_lbqyn"]
+[ext_resource type="Script" path="res://Mail.gd" id="5_gv7si"]
+[ext_resource type="Texture2D" uid="uid://ci0080yixn0ud" path="res://Sprites/MailWrite.png" id="6_5rjkq"]
+[ext_resource type="Texture2D" uid="uid://dp1hcxqehrklv" path="res://Sprites/Click.png" id="10_0ukff"]
+
+[node name="Node" type="Node"]
+
+[node name="UI" parent="." instance=ExtResource("1_yfegg")]
+next_scene = ExtResource("2_q1poc")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(480, 270)
+script = ExtResource("2_8rtlj")
+
+[node name="Click" type="Sprite2D" parent="."]
+z_index = -19
+position = Vector2(94, 194)
+texture = ExtResource("10_0ukff")
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Mail" type="Sprite2D" parent="."]
+z_index = -20
+position = Vector2(480, 270)
+texture = ExtResource("4_lbqyn")
+script = ExtResource("5_gv7si")
+
+[node name="MailWrite1" type="Sprite2D" parent="Mail"]
+visible = false
+position = Vector2(-43, 82)
+texture = ExtResource("6_5rjkq")
+region_enabled = true
+region_rect = Rect2(0, 0, 48, 32)
+
+[node name="MailWrite2" type="Sprite2D" parent="Mail"]
+visible = false
+position = Vector2(5, 82)
+texture = ExtResource("6_5rjkq")
+region_enabled = true
+region_rect = Rect2(48, 0, 48, 32)
+
+[node name="MailWrite3" type="Sprite2D" parent="Mail"]
+visible = false
+position = Vector2(53, 81)
+texture = ExtResource("6_5rjkq")
+region_enabled = true
+region_rect = Rect2(96, 0, 48, 32)
+
+[node name="MailWrite4" type="Sprite2D" parent="Mail"]
+visible = false
+position = Vector2(-45, 117)
+texture = ExtResource("6_5rjkq")
+region_enabled = true
+region_rect = Rect2(0, 32, 56, 40)
+
+[node name="MailWrite5" type="Sprite2D" parent="Mail"]
+visible = false
+position = Vector2(7, 116)
+texture = ExtResource("6_5rjkq")
+region_enabled = true
+region_rect = Rect2(56, 32, 48, 40)
+
+[node name="MailWrite6" type="Sprite2D" parent="Mail"]
+visible = false
+position = Vector2(51, 116)
+texture = ExtResource("6_5rjkq")
+region_enabled = true
+region_rect = Rect2(104, 32, 40, 40)

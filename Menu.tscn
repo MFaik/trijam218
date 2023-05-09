@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://c8r0m284kjh6n"]
+[gd_scene load_steps=3 format=3 uid="uid://c8r0m284kjh6n"]
 
 [ext_resource type="Script" path="res://Menu.gd" id="1_hdmxu"]
+[ext_resource type="AudioStream" uid="uid://dvyr7q3qk8d3x" path="res://Sounds/intro.ogg" id="2_hlj2p"]
 
 [node name="Menu" type="MarginContainer"]
 anchors_preset = 15
@@ -38,5 +39,9 @@ theme_override_font_sizes/font_size = 100
 action_mode = 0
 text = "Press To 
 Play"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_hlj2p")
+autoplay = true
 
 [connection signal="pressed" from="VBoxContainer/MarginContainer/Button" to="." method="_on_button_pressed"]

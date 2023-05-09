@@ -7,7 +7,18 @@ extends MarginContainer
 @onready var animation : AnimationPlayer = $AnimationPlayer
 @onready var progress_bar : ProgressBar = $VBoxContainer/ProgressBar
 @onready var camera : CameraShake = $"../Camera2D"
+@onready var audio_player : AudioStreamPlayer = $AudioStreamPlayer
 @export var next_scene : Resource
+
+@export var eat_sounds : Array[Resource]
+@export var kb_sounds : Array[Resource]
+@export var bed_sounds : Array[Resource]
+
+@onready var sounds = {
+	"wake": bed_sounds,
+	"eat": eat_sounds,
+	"mail": kb_sounds,
+}
 
 func start(name: String, start: String) -> void:
 	name_label.text = name
@@ -24,6 +35,9 @@ func damage(value: int) -> int:
 		animation.play("Fight End")
 	return progress_bar.value
 
+func play_sound(type: String):
+	audio_player.stream = sounds[type][randi() % len(sounds[type])]
+	audio_player.play()
 
 func _on_animation_player_animation_finished(anim_name):
 	if anim_name == "Fight Start":

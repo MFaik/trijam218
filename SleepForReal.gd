@@ -24,3 +24,4 @@ func _input(event):
 	if event is InputEventMouseMotion and damage_wait_timer <= 0 and not finished:
 		ui.damage(10) == 0
 		damage_wait_timer = 0.6
+		ui.play_bed_sound()

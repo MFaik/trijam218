@@ -13,7 +13,6 @@
 [node name="UI" parent="." instance=ExtResource("1_kt16y")]
 script = ExtResource("2_1xkpw")
 next_scene = ExtResource("3_pee8b")
-eat_sounds = [null, null]
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(480, 270)

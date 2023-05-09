@@ -1,6 +1,18 @@
-[gd_scene load_steps=10 format=3 uid="uid://iu6ng6o8tf8o"]
+[gd_scene load_steps=22 format=3 uid="uid://iu6ng6o8tf8o"]
 
 [ext_resource type="Script" path="res://ui.gd" id="1_0qmjl"]
+[ext_resource type="AudioStream" uid="uid://bgw3duuhas3tj" path="res://Sounds/eat0.ogg" id="2_3fdy7"]
+[ext_resource type="AudioStream" uid="uid://dtg4qsg47ts1a" path="res://Sounds/eat1.ogg" id="3_0aqbi"]
+[ext_resource type="AudioStream" uid="uid://cedjxlptknomd" path="res://Sounds/eat2.ogg" id="4_ecbfr"]
+[ext_resource type="AudioStream" uid="uid://dnqc754y5515u" path="res://Sounds/eat3.ogg" id="5_va7op"]
+[ext_resource type="AudioStream" uid="uid://b7jtjn33vpca1" path="res://Sounds/eat4.ogg" id="6_3gtge"]
+[ext_resource type="AudioStream" uid="uid://bjtgmmvw14glo" path="res://Sounds/kb0.ogg" id="7_ng6bb"]
+[ext_resource type="AudioStream" uid="uid://chc35jqlwg7l7" path="res://Sounds/kb1.ogg" id="8_kriw2"]
+[ext_resource type="AudioStream" uid="uid://cr46s4587kg2i" path="res://Sounds/kb2.ogg" id="9_t3rc7"]
+[ext_resource type="AudioStream" uid="uid://dtsvmajb4h7cf" path="res://Sounds/kb3.ogg" id="10_dmah1"]
+[ext_resource type="AudioStream" uid="uid://cdy05ofbcobkw" path="res://Sounds/bed0.ogg" id="11_ng7sx"]
+[ext_resource type="AudioStream" uid="uid://bnjjoxtkrig5w" path="res://Sounds/bed1.ogg" id="12_btb50"]
+[ext_resource type="AudioStream" uid="uid://4fgcye4tgwqr" path="res://Sounds/bed2.ogg" id="13_otlsq"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_kqard"]
 font_size = 30
@@ -212,6 +224,9 @@ theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 script = ExtResource("1_0qmjl")
+eat_sounds = Array[Resource]([ExtResource("2_3fdy7"), ExtResource("3_0aqbi"), ExtResource("4_ecbfr"), ExtResource("5_va7op"), ExtResource("6_3gtge")])
+kb_sounds = Array[Resource]([ExtResource("7_ng6bb"), ExtResource("8_kriw2"), ExtResource("9_t3rc7"), ExtResource("10_dmah1")])
+bed_sounds = Array[Resource]([ExtResource("11_ng7sx"), ExtResource("12_btb50"), ExtResource("13_otlsq")])
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 2
@@ -267,5 +282,7 @@ horizontal_alignment = 1
 libraries = {
 "": SubResource("AnimationLibrary_cy8la")
 }
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

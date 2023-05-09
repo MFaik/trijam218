@@ -8,6 +8,9 @@ extends MarginContainer
 @onready var progress_bar : ProgressBar = $VBoxContainer/ProgressBar
 @onready var camera : CameraShake = $"../Camera2D"
 @export var next_scene : Resource
+@onready var audio_player : AudioStreamPlayer = $AudioStreamPlayer
+
+@export var bed_sounds : Array[Resource]
 
 func _process(delta):
 	progress_bar.value += delta * 5
@@ -15,6 +18,9 @@ func _process(delta):
 		end_label.visible = true
 		animation.play("Fight End")
 
+func play_bed_sound():
+	audio_player.stream = bed_sounds[randi() % len(bed_sounds)]
+	audio_player.play()
 
 func start(name: String, start: String) -> void:
 	name_label.text = name

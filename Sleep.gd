@@ -23,3 +23,4 @@ func _input(event):
 			sleep.visible = false
 			awake.visible = true
 		damage_wait_timer = 0.6
+		ui.play_sound("wake")

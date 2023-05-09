@@ -17,3 +17,6 @@ mono_crash.*.json
 # Builds
 [Bb]uilds/
 [Bb]uild/
+
+# i hate .DS_Store i hate .DS_Store i hate .DS_Store i-
+.DS_Store
